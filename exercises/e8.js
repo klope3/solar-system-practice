@@ -6,6 +6,8 @@ import { data } from "../data/data";
 
 export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
+  const planet = data.planets.find(planet => planet.moons && planet.moons.find(moon => moon === moonName));
+  return planet ? planet.name : undefined;
 }
 
 
